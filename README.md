@@ -19,7 +19,7 @@ Hvis brukeren har skrevet alle input rigktig blir alle inputboksene blanke
 og informasjonen legges inn i en tabell.
 Hvis brukeren trykker på "Slett alle billettene" blir tabellen borte.
 
-Appliikasjonen lagrer nå billettene på server slik at man kan refreshe siden uten å miste alle billettene.
+Applikasjonen lagrer nå billettene på server slik at man kan refreshe siden uten å miste alle billettene.
 Applikasjonen er nå også stylet ved hjelp av bootstrap.
 Det er lagt til en mappe kalt "screenshots" i root som viser hvordan applikajsonen oppfører seg når billetter blir 
 lagt til og slettet og at spring boot serveren kjører.
