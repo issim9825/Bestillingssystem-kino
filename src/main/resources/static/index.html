@@ -2,59 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kinobilletter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="kinobiletter.js"></script>
 </head>
 <body>
-<h1>Bestilling av kinobilletter</h1>
-<label for="film">Velg film:</label>
-<select id="film">
-    <option>Velg film her</option>
-    <option>Lord of the Rings</option>
-    <option>Harry Potter</option>
-    <option>Oppenheimer</option>
-    <option>Barbie</option>
-    <option>The Gladiator</option>
-</select><span id="filmsjekk" style="color: red"></span>
-<br/><br/>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <h2>Bestilling av kinobilletter</h2>
+            <form class="form">
+                <div class="form-group">
+                    <label for="film">Velg film:</label>
+                    <select class="form-control" id="film">
+                        <option>Velg film her</option>
+                        <option>Lord of the Rings</option>
+                        <option>Harry Potter</option>
+                        <option>Oppenheimer</option>
+                        <option>Barbie</option>
+                        <option>The Gladiator</option>
+                    </select><span id="filmsjekk" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="antall">Antall</label>
+                    <input class="form-control" type="text" id="antall" style="width: 4rem">
+                    <span id="antallsjekk" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="fnavn">Fornavn</label>
+                    <input class="form-control" type="text" id="fnavn">
+                    <span id="fnavnsjekk" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="enavn">Etternavn</label>
+                    <input class="form-control" type="text" id="enavn">
+                    <span id="enavnsjekk" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="tlfnr">Telefonnr</label>
+                    <input class="form-control" type="text" id="tlfnr">
+                    <span id="tlfnrsjekk" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="epost">Epost</label>
+                    <input class="form-control" type="email" id="epost">
+                    <span id="epostsjekk" style="color: red"></span>
+                </div>
+            </form>
+            <button class="btn btn-primary" onclick="visBilletter()">Kjøp billett</button>
+        </div>
+        <div class="col-md-7">
+            <h2>Alle billetter</h2>
+            <div id="utskrift"></div>
+            <button class="btn btn-danger" onclick="slett()">Slett alle billettene</button>
+        </div>
+    </div>
+</div>
+
 <table>
     <tr>
-        <td><label for="antall">Antall</label>
-            <input type="text" id="antall" style="width: 1.2rem"></td>
-        <td><div id="antallsjekk" style="color: red"></div></td>
+
     </tr>
 </table>
 <br/><br/>
 <table>
     <tr>
-        <td><label for="fnavn">Fornavn</label></td>
-        <td><input type="text" id="fnavn"></td>
-        <td><div id="fnavnsjekk" style="color: red"></div></td>
+
     </tr>
     <tr>
-        <td><label for="enavn">Etternavn</label></td>
-        <td><input type="text" id="enavn"></td>
-        <td><div id="enavnsjekk" style="color: red"></div></td>
+
     </tr>
     <tr>
-        <td><label for="tlfnr">Telefonnr</label></td>
-        <td><input type="text" id="tlfnr"></td>
-        <td><div id="tlfnrsjekk" style="color: red"></div></td>
+
+
     </tr>
     <tr>
-        <td><label for="epost">Epost</label></td>
-        <td><input type="email" id="epost"></td>
-        <td><div id="epostsjekk" style="color: red"></div></td>
+
+
     </tr>
     <tr>
-        <td><button onclick="visBilletter()">Kjøp billett</button></td>
+
     </tr>
 </table>
 
 
-<h2>Alle billetter</h2>
-<table id="utskrift"></table>
-<button onclick="slett()">Slett alle billettene</button>
+
 </body>
 </html>

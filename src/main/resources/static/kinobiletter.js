@@ -89,7 +89,7 @@ function hentAlle() {
 }
 
 function formaterData(billetter) {
-    let ut = "<tr>" + "<th>Film</th>" + "<th>Antall</th>" +
+    let ut = "<table class='table table-striped'><tr>" + "<th>Film</th>" + "<th>Antall</th>" +
         "<th>Fornavn</th>" + "<th>Etternavn</th>" + "<th>Telefonnr</th>" +
         "<th>Epost</th>" + "</tr>";
 
@@ -100,7 +100,7 @@ function formaterData(billetter) {
             "</td><td style='text-align: end'>" + b.tlfnr + "</td><td>" + b.epost.toLowerCase() +
             "</td></tr>";
     }
-
+    ut+="</table>";
     $("#utskrift").html(ut);
 }
 
