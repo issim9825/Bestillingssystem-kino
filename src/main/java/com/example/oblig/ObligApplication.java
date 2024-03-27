@@ -1,13 +1,13 @@
-package com.example.oblig2;
+package com.example.oblig;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Oblig2Application {
+public class ObligApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Oblig2Application.class, args);
+        SpringApplication.run(ObligApplication.class, args);
     }
 
 }

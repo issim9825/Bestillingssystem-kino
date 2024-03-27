@@ -1,6 +1,6 @@
-package com.example.oblig2.Controller;
+package com.example.oblig.Controller;
 
-import com.example.oblig2.Model.Billett;
+import com.example.oblig.Model.Billett;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;

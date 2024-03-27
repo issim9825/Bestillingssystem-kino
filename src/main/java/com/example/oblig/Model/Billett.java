@@ -1,4 +1,4 @@
-package com.example.oblig2.Model;
+package com.example.oblig.Model;
 
 public class Billett {
     private String film;
