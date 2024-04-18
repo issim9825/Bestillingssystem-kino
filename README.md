@@ -24,6 +24,8 @@ Applikasjonen er nå også stylet ved hjelp av bootstrap.
 Det er lagt til en mappe kalt "screenshots" i root som viser hvordan applikajsonen oppfører seg når billetter blir 
 lagt til og slettet og at spring boot serveren kjører.
 
-Nå lagres billettene i en database på server istedenfor i et array
-Her er videoen til hvordan den funker:
 
+Nå lagres billettene i en database på server istedenfor i et array
+
+Her er videoen til hvordan den funker:
+https://vimeo.com/936213593
