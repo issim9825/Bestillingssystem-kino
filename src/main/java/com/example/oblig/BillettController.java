@@ -1,6 +1,6 @@
-package com.example.oblig.Controller;
+package com.example.oblig;
 
-import com.example.oblig.Model.Billett;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,20 +10,21 @@ import java.util.List;
 
 @RestController
 public class BillettController {
-    private final List<Billett> alleBillettene = new ArrayList<>();
+    @Autowired
+    private BilettRepository rep;
 
     @PostMapping("/lagre")
     public void lagreBillett(Billett innBillett) {
-        alleBillettene.add(innBillett);
+        rep.lagreBillett(innBillett);
     }
 
     @GetMapping("/alleBillettene")
     public List<Billett> getAlleBillettene() {
-        return alleBillettene;
+        return rep.getBillett();
     }
 
     @GetMapping("/slettAlle")
     public void slettAlle() {
-        alleBillettene.clear();
+        rep.slettAlle();
     }
 }

@@ -1,3 +1,11 @@
+$(function () {
+    $.get("/alleBillettene", function (data) {
+        if (data !== []) {
+            hentAlle()
+        }
+    })
+});
+
 function visBilletter() {
     let film = document.getElementById("film").value;
     let antall = parseInt(document.getElementById("antall").value)
@@ -10,7 +18,7 @@ function visBilletter() {
 
 
     // Sjekker om en film er valgt
-    if (film.match(/^Velg film her$/)) {
+    if (film.match(/Velg film her/)) {
         $("#filmsjekk").text("\tMå velge en film");
         error = 1;
     } else {
@@ -27,7 +35,7 @@ function visBilletter() {
     }
 
     // Skjekker om navn er skrevet inn riktig
-    const navnRegex = /^(\s+|)$/;
+    const navnRegex = /(\s|\s+)|(\d|\d+)/;
     if (navnRegex.test(fnavn)) {
         $("#fnavnsjekk").html("Må skrive noe inn i fornavnet");
         $("#fnavn").val("");
@@ -95,30 +103,30 @@ function formaterData(billetter) {
 
     // Skriver ut billetten i tabell
     for (let b of billetter) {
-        ut += "<tr><td>" + b.film + "</td><td style='text-align: center'>" + b.antall +
+        ut += "<tr><td>" + b.film + "</td><td class='text-center'>" + b.antall +
             "</td><td>" + b.fnavn + "</td><td>" + b.enavn +
-            "</td><td style='text-align: end'>" + b.tlfnr + "</td><td>" + b.epost.toLowerCase() +
+            "</td><td class='text-right'>" + b.tlfnr + "</td><td>" + b.epost.toLowerCase() +
             "</td></tr>";
     }
-    ut+="</table>";
+    ut += "</table>";
     $("#utskrift").html(ut);
 }
 
 function slett() {
     $.get("/slettAlle", function () {
-        hentAlle();
+        window.location.href = "/";
     })
 }
 
 function validateTlfnr(tlfnr) {
     // validerer om et nummer er 8 sifre
-    const tlfnrRegex = /^\d{8}$/;
+    const tlfnrRegex = /\d{8}/;
     return tlfnrRegex.test(tlfnr);
 }
 
 function validateEpost(epost) {
     // validerer om en epost er riktig
-    const epostRegex = /^[^\s@]+@+[^\s@]+\.+[^\s@]+$/;
+    const epostRegex = /[^\s@]+@+[^\s@]+.+[^\s@]+/;
     return epostRegex.test(epost);
 }
 
