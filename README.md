@@ -1,4 +1,4 @@
-Oblig 2
+Oblig 3
 =======
 OsloMet brukernavn: issim9825
 
@@ -10,7 +10,7 @@ GitHub repo URL: GitHub repo URL: https://github.com/issim9825/webprogOblig
 Fullt navn: Isak Simonsen
 
 
-Kort beskrivelse av applikasjon (5-10 setninger):
+Kort beskrivelse av applikasjon:
 
 Applikasjonen er et system for å bestille kinobilletter.
 Hvis brukeren skriver input inn feil, kommer en melding ved siden av input 
@@ -23,4 +23,7 @@ Applikasjonen lagrer nå billettene på server slik at man kan refreshe siden ut
 Applikasjonen er nå også stylet ved hjelp av bootstrap.
 Det er lagt til en mappe kalt "screenshots" i root som viser hvordan applikajsonen oppfører seg når billetter blir 
 lagt til og slettet og at spring boot serveren kjører.
+
+Nå lagres billettene i en database på server istedenfor i et array
+Her er videoen til hvordan den funker:
 

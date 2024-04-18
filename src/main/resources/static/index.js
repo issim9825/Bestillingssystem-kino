@@ -1,9 +1,5 @@
 $(function () {
-    $.get("/alleBillettene", function (data) {
-        if (data !== []) {
-            hentAlle()
-        }
-    })
+    hentAlle();
 });
 
 function visBilletter() {
@@ -101,7 +97,8 @@ function formaterData(billetter) {
         "<th>Fornavn</th>" + "<th>Etternavn</th>" + "<th>Telefonnr</th>" +
         "<th>Epost</th>" + "</tr>";
 
-    // Skriver ut billetten i tabell
+
+// Skriver ut billetten i tabell
     for (let b of billetter) {
         ut += "<tr><td>" + b.film + "</td><td class='text-center'>" + b.antall +
             "</td><td>" + b.fnavn + "</td><td>" + b.enavn +
