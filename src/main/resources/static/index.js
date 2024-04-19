@@ -31,8 +31,8 @@ function visBilletter() {
     }
 
     // Skjekker om navn er skrevet inn riktig
-    const navnRegex = /(\s|\s+)|(\d|\d+)/;
-    if (navnRegex.test(fnavn)) {
+    const navnRegex = /^(\s|\s+)|(\d|\d+)$/;
+    if (navnRegex.test(fnavn) || fnavn === null) {
         $("#fnavnsjekk").html("Må skrive noe inn i fornavnet");
         $("#fnavn").val("");
         error = 1;
@@ -93,20 +93,31 @@ function hentAlle() {
 }
 
 function formaterData(billetter) {
-    let ut = "<table class='table table-striped'><tr>" + "<th>Film</th>" + "<th>Antall</th>" +
+    let ut = "<table class='table table-responsive-sm'><tr>" + "<th>Film</th>" + "<th>Antall</th>" +
         "<th>Fornavn</th>" + "<th>Etternavn</th>" + "<th>Telefonnr</th>" +
-        "<th>Epost</th>" + "</tr>";
+        "<th>Epost</th><th>";
 
 
 // Skriver ut billetten i tabell
     for (let b of billetter) {
-        ut += "<tr><td>" + b.film + "</td><td class='text-center'>" + b.antall +
-            "</td><td>" + b.fnavn + "</td><td>" + b.enavn +
-            "</td><td class='text-right'>" + b.tlfnr + "</td><td>" + b.epost.toLowerCase() +
-            "</td></tr>";
+        ut += "<tr><td>" + b.film + "</td>" +
+            "<td class='text-center'>" + b.antall + "</td>" +
+            "<td>" + b.fnavn + "</td>" +
+            "<td>" + b.enavn + "</td>" +
+            "<td class='text-right'>" + b.tlfnr + "</td>" +
+            "<td>" + b.epost.toLowerCase() + "</td></tr><tr>" +
+            "<td><a class='btn btn-info' href='endre.html?id=" + b.id + "'>Endre</a></td>" +
+            "<td><button class='btn btn-danger' onclick='slettEn(" + b.id + ")'>Slett</button> </td></tr>";
     }
     ut += "</table>";
     $("#utskrift").html(ut);
+}
+
+function slettEn(id) {
+    const url = "/slettEn?id=" + id;
+    $.get(url, function () {
+        window.location.href = "/";
+    })
 }
 
 function slett() {

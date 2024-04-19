@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -23,8 +22,23 @@ public class BillettController {
         return rep.getBillett();
     }
 
+    @GetMapping("/hentEnBillett")
+    public Billett getHentEnBillett(int id) {
+       return rep.hentEnBillett(id);
+    }
+
+    @PostMapping("/endreBillett")
+    public void endreBillett(Billett billett) {
+        rep.endreBillett(billett);
+    }
+
     @GetMapping("/slettAlle")
     public void slettAlle() {
         rep.slettAlle();
+    }
+
+    @GetMapping("/slettEn")
+    public void slettEnBillett(int id) {
+        rep.slettEnBillett(id);
     }
 }

@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kinobilletter</title>
+    <title>Endre billett</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="index.js"></script>
+    <script src="endre.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="row">
         <div class="col-md-5">
-            <h2>Bestilling av kinobilletter</h2>
+            <h2>Endre billett</h2>
             <form class="form">
                 <input type="hidden" id="id">
-                <label class="form-group ">
+                <label class="form-group">
                     <select class="form-control dropdown" id="film">
-                        <option>Velg film her</option>
                         <option>Lord of the Rings</option>
                         <option>Harry Potter</option>
                         <option>Oppenheimer</option>
@@ -25,41 +24,35 @@
                         <option>The Gladiator</option>
                     </select>
                 </label>
-                <span id="filmsjekk" class="text-danger"></span>
                 <div class="form-group">
                     <label for="antall">Antall</label>
-                    <input class="form-control" type="number" id="antall" placeholder="1">
+                    <input class="form-control" type="number" id="antall">
                     <div id="antallsjekk" class="text-danger"></div>
                 </div>
                 <div class="form-group">
                     <label for="fnavn">Fornavn</label>
-                    <input class="form-control" type="text" id="fnavn" placeholder="John">
+                    <input class="form-control" type="text" id="fnavn">
                     <div id="fnavnsjekk" class="text-danger"></div>
                 </div>
                 <div class="form-group">
                     <label for="enavn">Etternavn</label>
-                    <input class="form-control" type="text" id="enavn" placeholder="Doe">
+                    <input class="form-control" type="text" id="enavn">
                     <div id="enavnsjekk" class="text-danger"></div>
                 </div>
                 <div class="form-group">
                     <label for="tlfnr">Telefonnr</label>
-                    <input class="form-control" type="text" id="tlfnr" placeholder="98765432">
+                    <input class="form-control" type="text" id="tlfnr">
                     <div id="tlfnrsjekk" class="text-danger"></div>
                 </div>
                 <div class="form-group">
                     <label for="epost">Epost</label>
-                    <input class="form-control" type="email" id="epost" placeholder="info@example.com">
+                    <input class="form-control" type="email" id="epost">
                     <div id="epostsjekk" class="text-danger"></div>
                 </div>
             </form>
-            <button class="btn btn-primary" onclick="visBilletter()">Kjøp billett</button>
-        </div>
-        <div class="col-md-7">
-            <h3>Alle billetter</h3>
-            <div id="utskrift"></div>
-            <button class="btn btn-danger" onclick="slett()">Slett alle billettene</button>
+            <button class="btn btn-primary" onclick="endreBillett()">Endre</button>
         </div>
     </div>
-</div>
+</div>S
 </body>
 </html>

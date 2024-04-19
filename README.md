@@ -28,4 +28,4 @@ lagt til og slettet og at spring boot serveren kjører.
 Nå lagres billettene i en database på server istedenfor i et array
 
 Her er videoen til hvordan den funker:
-https://vimeo.com/936213593
+https://vimeo.com/936609829

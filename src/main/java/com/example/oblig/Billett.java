@@ -1,11 +1,13 @@
 package com.example.oblig;
 
 public class Billett {
+    private int id;
     private String film;
     private int antall;
     private String fnavn, enavn, tlfnr, epost;
 
-    public Billett(String film, int antall, String fnavn, String enavn, String tlfnr, String epost) {
+    public Billett(int id, String film, int antall, String fnavn, String enavn, String tlfnr, String epost) {
+        this.id = id;
         this.film = film;
         this.antall = antall;
         this.fnavn = fnavn;
@@ -15,6 +17,14 @@ public class Billett {
     }
 
     public Billett() {}
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFilm() {
         return film;
