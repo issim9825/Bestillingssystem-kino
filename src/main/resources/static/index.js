@@ -31,8 +31,8 @@ function visBilletter() {
     }
 
     // Skjekker om navn er skrevet inn riktig
-    const navnRegex = /^(\s|\s+)|(\d|\d+)$/;
-    if (navnRegex.test(fnavn) || fnavn === null) {
+    const navnRegex = /(\s|\s+)|(\d|\d+)|("")/;
+    if (navnRegex.test(fnavn) || fnavn === "") {
         $("#fnavnsjekk").html("Må skrive noe inn i fornavnet");
         $("#fnavn").val("");
         error = 1;
@@ -40,7 +40,7 @@ function visBilletter() {
         $("#fnavnsjekk").text("");
     }
 
-    if (navnRegex.test(enavn)) {
+    if (navnRegex.test(enavn) || enavn === "") {
         $("#enavnsjekk").text("Må skrive noe inn i etternavnet");
         $("#enavn").val("");
         error = 1;
