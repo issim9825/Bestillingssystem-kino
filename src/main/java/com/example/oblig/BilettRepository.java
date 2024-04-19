@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collections;
 import java.util.List;
 
 import static java.lang.reflect.Array.newInstance;
@@ -20,8 +21,10 @@ public class BilettRepository {
     }
 
     public List<Billett> getBillett() {
-        String sql = "SELECT * FROM BILLETT ORDER BY ENAVN";
-        return db.query(sql, new BeanPropertyRowMapper<>(Billett.class));
+        String sql = "SELECT * FROM BILLETT";
+        List<Billett> alleBilletter = db.query(sql, new BeanPropertyRowMapper<>(Billett.class));
+        Collections.sort(alleBilletter);
+        return alleBilletter;
     }
 
     public Billett hentEnBillett(int id) {

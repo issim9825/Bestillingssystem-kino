@@ -1,6 +1,8 @@
 package com.example.oblig;
 
-public class Billett {
+import java.util.Comparator;
+
+public class Billett implements Comparable<Billett> {
     private int id;
     private String film;
     private int antall;
@@ -72,5 +74,10 @@ public class Billett {
 
     public void setEpost(String epost) {
         this.epost = epost;
+    }
+
+    @Override
+    public int compareTo(Billett billett) {
+        return this.getEnavn().compareToIgnoreCase(billett.getEnavn());
     }
 }
