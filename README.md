@@ -1,7 +1,5 @@
-Oblig 3
+Bestille kinobilletter
 =======
-OsloMet brukernavn: issim9825
-
 GitHub brukernavn: issim9825
 
 GitHub repo URL: GitHub repo URL: https://github.com/issim9825/webprogOblig
@@ -25,7 +23,7 @@ Det er lagt til en mappe kalt "screenshots" i root som viser hvordan applikajson
 lagt til og slettet og at spring boot serveren kjører.
 
 
-Nå lagres billettene i en database på server istedenfor i et array
+Billettene lagres i en in-memory database på server-siden.
 
 Her er videoen til hvordan den funker:
 https://vimeo.com/936609829
