@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>Oblig3</artifactId>
+    <artifactId>Bestillingssystem-kino</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Oblig3</name>
     <description>Oblig3</description>
@@ -45,6 +45,9 @@
     </dependencies>
 
     <build>
+        <finalName>
+            Bestillingssystem kinobilletter
+        </finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
