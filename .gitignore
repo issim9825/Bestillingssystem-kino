@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-!**/Bestillingssystem kinobilletter.jar
+!target/Bestillingssystem kinobilletter.jar
 
 ### STS ###
 .apt_generated
