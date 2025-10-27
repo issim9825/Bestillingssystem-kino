@@ -1,10 +1,14 @@
 Bestille kinobilletter
 =======
-GitHub brukernavn: issim9825
 
-GitHub repo URL: GitHub repo URL: https://github.com/issim9825/webprogOblig
+## Quick start
+Last ned .jar-fil <a href="https://github.com/issim9825/Bestillingssystem-kino/releases/download/release/Bestillingssystem-kinobilletter.jar">her</a>
+Kjør med
+`java -jar ./Bestillingssystem-kinobilletter`
+I samme mappe som filen.
 
 
+## Docs
 Fullt navn: Isak Simonsen
 
 
