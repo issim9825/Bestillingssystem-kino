@@ -1,6 +1,9 @@
 services:
   - type: web
-    name: my-spring-app
+    runtime: Node
+    name: bestillingssystem-kino
+    repo: https://github.com/issim9825/Bestillingssystem-kino
+    region: frankfurt
     env: java
     plan: free
     buildCommand: |
