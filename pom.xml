@@ -46,7 +46,7 @@
 
     <build>
         <finalName>
-            Bestillingssystem kinobilletter
+            Bestillingssystem-kinobilletter
         </finalName>
         <plugins>
             <plugin>
