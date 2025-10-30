@@ -2,7 +2,7 @@ Bestille kinobilletter
 =======
 
 ## Quick start
-Du kan prøve webappen <a href="kinoapp.isaksimonsen.no">her</a>  
+Du kan prøve webappen <a href="https://kinoapp.isaksimonsen.no">her</a>  
 
 
 
@@ -29,4 +29,5 @@ Billettene lagres i en in-memory database på server-siden.
 
 Her er videoen til hvordan den funker:
 https://vimeo.com/936609829
+
 
