@@ -2,7 +2,13 @@ Bestille kinobilletter
 =======
 
 ## Quick start
-Du kan prøve webappen <a href="https://kinoapp.isaksimonsen.no">her</a>  
+Du kan prøve webappen <a href="https://kinoapp.isaksimonsen.no">her</a>
+Eller last ned siste <a href="https://github.com/issim9825/Bestillingssystem-kino/releases/download/release/Bestillingssystem-kinobilletter.jar">release</a>  
+Og kjør med 
+`java -jar ./Bestillingssystem-kino.jar`  
+Må ha java 17 eller en nyere versjon for å kjøre dette programmet.  
+Når programmet kjører i terminalen kan du gå inn på localhost:8080 i en browser for å prøve applikasjonen.  
+Det er lagt inn 2 eksempel billetter fra før.
 
 
 
@@ -29,5 +35,6 @@ Billettene lagres i en in-memory database på server-siden.
 
 Her er videoen til hvordan den funker:
 https://vimeo.com/936609829
+
 
 
